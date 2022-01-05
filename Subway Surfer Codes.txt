@@ -1,0 +1,36 @@
+1.All Boards unlocked       Keyword: IsBoardOwned          | Class: BoardManager      |  How to mod: return true;                    
+2.All Themes unlocked       Keyword: IsThemeOwned          | Class: BoardManager      |  How to mod: return true;                    
+3.All Characters unlocked:  Keyword: IsCharacterOwned      | Class: CharacterManager  |  How to mod: Here you have 2 same Methods, take the second one on the list and return true;                 
+4.All Outfits unlocked      Keyword: IsOutfitUnlocked      | Class: CharacterManager  |  How to mod: return true;                
+5.Unlimited Keys            Keyword: get_keys              | Class: InventorySave     |  How to mod: return 99999999;             
+6.Unlimited Coins           Keyword: get_coins             | Class: InventorySave     |  How to mod: return 99999999;                 
+7.Double Coins unlocked     Keyword: hasDoubleCoinsUpgrade | Class: UserSave          |  How to mod: return true;                  
+8.Ads removed               Keyword: hasAdRemovalUpgrade   | Class: UserSave          |  How to mod: return true;                  
+9.                          Keyword:                       | Class:                  
+10.                         Keyword:                       | Class:                    
+
+Which .dll: 
+Assembly-CSharp.dll
+
+Note 1:
+
+When you click on "Compile" and you get the following Error:
+Attribute 'global::System.Diagnostics.DebuggerBrowsable'is not valid on this declaration type. It is only valid on 'property, indexer, field' declarations.
+
+Then simple double click on the Error and remove ONLY the following line:
+
+[global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Note 2: 
+
+When you click on "Compile" and you get the following Error:
+
+Invalid token '<' in class, struct, or interface member declaration
+
+Then simple double click on the Error and remove the following stuff:
+
+// Token: 0x04000C4E RID: 3150
+[global::System.Runtime.CompilerServices.CompilerGenerated]
+private static global::System.Action<global::AppRefresh.RefreshType> <>f__mg$cache0;
